@@ -25,13 +25,23 @@ public class JqueryTask18 {
 		   action.dragAndDrop(element1, element2)
 		    .build()
 		    .perform();
+		 
+		String Colour = element2.getCssValue("background-color"); //we can get this CssValue from right hand side of the particular Webelement
+		System.out.println(Colour);
+		   if(Colour.equals("rgba(255, 250, 144, 1)")) { //we can get this rgba from right hand side of the particular Webelement
+			   System.out.println("Background Colour Verified");
+		   }else {
+			   System.out.println("Background Colour is not Verified");
+		   }
+		   
 		 String x= element2.getText();
 		 System.out.println(x);
 		 if(x.equalsIgnoreCase("Dropped!")) {
 			 System.out.println("Dropped text is successful");
 		 }else {
-			 System.out.println("Failed");
+			 System.out.println("Dropped Text is Failed");
 		 }
+		 
 		 
 	}
 
